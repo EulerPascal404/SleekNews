@@ -16,22 +16,35 @@ html {
 } 	
 .w3-black {
 	font-family: Aleo;
+	background-color: #002e63;
 }
 .w3-padding-64 {
 	font-family: Aleo;
 }
+.w3-hover-red {
+	color:#fff!important;
+	background-color:#002e63!important
+}
+.w3-hover-red:hover{color:#fff!important;background-color:#002146!important}
+.bgc {
+	background-color: #002e63;
+}
 .w3-xxlarge {
 	font-family: Aleo;
+	background-color: #002e63;
 }
 .w3-xlarge {
 	font-family: Aleo;
 }
+.w3-xlarge{
+	background-color: #002e63;
+}
 .file_submit{
   margin-top: 1vmax;
   width: 150px;
-  border: 1px solid #55acee;
+  border: 1px solid #002e63;
   outline: none;
-  background-color: #55acee;
+  background-color: #002e63;
   color: white;
   padding: 1vmax;
   cursor: pointer;
@@ -42,5 +55,5 @@ html {
 
 .file_submit:hover{
   background-color: white;
-  color: #55acee
+  color: #002e63
 }

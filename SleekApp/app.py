@@ -34,7 +34,7 @@ def result():
 	output = request.form.to_dict()
 	name = output["name"]	
 	time.sleep(1)
-	return render_template("index.html",name = func1(name))
+	return render_template("index.html",name = "cocka")
 
 if __name__ == '__main__':
 	app.run(debug = True,port = 5001)
