@@ -1,0 +1,316 @@
+@import url(https://fonts.googleapis.com/css?family=Aleo);
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Aleo;
+    letter-spacing: 3px;
+}
+
+
+/* element */
+.row {
+  display: flex;
+  
+}
+.Submit {
+	
+}
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  padding: 5px;
+}
+a {
+	display: block;
+	background: white;
+	color: black;
+	padding: 15px;
+	cursor: pointer;
+	text-decoration: none;
+	width: 320px;
+	text-align: center;
+	border-radius: 5px;
+  border-color: black;
+	font-size: 20px;
+}
+a:hover {
+	background: #808080;
+}
+.btn-1 {
+  display: block;
+	background: white;
+	color: black;
+	padding: 15px;
+	cursor: pointer;
+	text-decoration: none;
+	width: 320px;
+	text-align: center;
+	border-radius: 5px;
+  border: 2px solid black;
+  border-color: black;
+	font-size: 20px;
+}
+.btn-2 {
+	background: #F98909;
+}
+
+.btn-2:hover {
+	background: #DC6C11;
+}
+p {
+	color: #888;
+	padding: 15px;
+}
+.inputStory{
+    width: 1500px;
+}
+.let_space{
+    letter-spacing: 3px;
+}
+
+.c_grid{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 1vmax;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+   
+.grid{
+    display: grid;
+    grid-gap: 1vmax;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+    
+}
+.wrapper{
+    margin:auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.button{
+    border: 2px solid white;
+    padding: 10px;
+    color: white ;
+    text-decoration: none;
+    text-align: center;
+    font-family: Aclonica;
+    letter-spacing: 0.3px;
+    font-size: 22px;
+    width: 25%;
+    color: white;
+    font:2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+    padding:14px;
+    background:url(overlay.png) repeat-x center #ffcc00;background-color:rgb(115, 164, 255);
+    border:9px solid black;
+    -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+    border-bottom:1px solid #9f9f9f;
+    -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+    cursor:pointer;
+
+}
+
+.center1 {
+    margin: auto;
+    width: 40%;
+    border: 5px solid black;
+    padding: 10px;
+    }
+.button:hover{
+    background-color: royal-blue;
+    color: light blue;
+}
+
+
+.popup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  text-align: center;
+}
+
+#directions-popup .popup-content{
+  width: 500px;
+  height: 670px;
+  background: #bbb;
+  margin: 10px auto;
+  position: relative;
+  border: 5px solid white;
+  text-align: center;
+}
+
+.close{
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid black;
+  color: black;
+  text-decoration: none;
+  line-height: 0;
+  padding: 9px 0 7px;
+  width: 16px;
+  text-align: center;
+}
+
+.popup:target{
+  display: block;
+}
+   
+.box2{
+    grid-template-columns: 1fr 1fr;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+  
+.box3{
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+} 
+
+/* element */
+
+.table_cont{
+    overflow-x: scroll;
+    width: 70vw;
+}
+.LockOn {
+    display: block;
+    visibility: visible;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    width: 105%;
+    height: 105%;
+    background-color:black;
+    vertical-align:bottom;
+    padding-top: 20%; 
+    filter: alpha(opacity=75); 
+    opacity: 0.75; 
+    font-size:large;
+    color:black;
+    font-style:italic;
+    font-weight:400;
+    background-image: url("../Common/loadingGIF.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.loader {
+    border: 16px solid black; /* Light grey */
+    border-top: 16px solid black; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+table {
+    border-collapse: collapse;
+    letter-spacing: 3px;
+    /* width: 100%; */
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 1vmax;
+    width: fit-content;
+}
+
+form{
+    margin: 2vmax 10vmax;
+    padding:3vmax;
+    border: 12px solid #515151;
+    
+    font-family: Courier New, monospace;
+}
+
+label{
+    margin:auto;
+    font-size: 22;
+    font-family: Aleo;
+    letter-spacing: 0.3;
+}
+ 
+input{
+    padding:1vmax;
+    font-size: 1.3vmax;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+
+select{
+    padding:1vmax;
+    font-size: 1.3vmax;
+    border: 1px solid #dddddd;
+    outline: none;
+    letter-spacing: 3px;
+}
+
+option{
+    font-size: 1.5vmax;
+    letter-spacing: 3px;
+}
+/* Style buttons */
+.btn {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Aleo;
+}
+html {
+	scroll-behavior: smooth;
+   }
+   
+   a {
+	text-decoration: none;
+	color: black;
+   } 
+   
+   #down {
+	margin-top: 100%;
+	padding-bottom: 25%;
+   } 
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: white;
+  font-family: Aleo;
+}
+
+.file_submit{
+  margin-top: 1vmax;
+  width: 150px;
+  border: 1px solid #55acee;
+  outline: none;
+  background-color: #55acee;
+  color: white;
+  padding: 1vmax;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 0.3;
+  font-family: Aleo;
+}
+
+.file_submit:hover{
+  background-color: white;
+  color: #55acee
+}
