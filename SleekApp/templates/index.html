@@ -13,7 +13,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 .bgimg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/w3images/pizza.jpg");
+  background-image: url("/static/bg.jpg");
   min-height: 90%;
 }
 </style>
@@ -36,9 +36,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
     <span class="w3-tag w3-xlarge">Created with love by Aditya, Joey, Josh, and Ryan</span>
   </div>
   <div class="w3-display-middle w3-center">
-    <span class="w3-text-white w3-hide-small" style="font-size:100px">thin<br>CRUST PIZZA</span>
-    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>
-    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Analyze the link</a></p>
+    <img src="/static/logo.png" style="width:100%;" id="myMap">
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Learn More</a></p>
   </div>
 </header>
 
@@ -46,9 +45,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
   <div class="w3-content">
   
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px"></h1>
     <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'CNN');" id="myLink">
         <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
@@ -126,24 +125,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
   <div class="w3-content">
     <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
-    <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p><strong>The Chef?</strong> Mr. Italiano himself<img src="/w3images/chef.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
-    <p>We are proud of our interiors.</p>
-    <img src="/w3images/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
-    <h1><b>Opening Hours</b></h1>
-    
-    <div class="w3-row">
-      <div class="w3-col s6">
-        <p>Mon & Tue CLOSED</p>
-        <p>Wednesday 10.00 - 24.00</p>
-        <p>Thursday 10:00 - 24:00</p>
-      </div>
-      <div class="w3-col s6">
-        <p>Friday 10:00 - 12:00</p>
-        <p>Saturday 10:00 - 23:00</p>
-        <p>Sunday Closed</p>
-      </div>
-    </div>
+    <p>SleekNews was built in order to explore and experiment with the capabilities of machine learning, and the true depth of the field. We wanted to simplify the lives of people, condensing bloated and unnecessarily long news stories to concise summarizations.</p>
     
   </div>
 </div>
