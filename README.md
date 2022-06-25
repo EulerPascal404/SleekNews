@@ -1,2 +1,2 @@
-# aditya is mid lmao the real name is
-########### GIVE ME THE BBC
+# Sleek News
+### Your one-stop shop
