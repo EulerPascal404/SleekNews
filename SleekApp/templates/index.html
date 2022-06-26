@@ -65,34 +65,38 @@ a {background-color: #002e63}
 <!-- Menu Container -->
 <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
   <div class="w3-content">
+    
     <center>
       <label for = "Name" style="color:rgb(255, 255, 255)">A bite-sized summary of your news article is just one click away.</label><br>
-            <input type="text" name = "name" id = "name">
+            
           </center>
-            <center><input type="Submit" class = "file_submit"></center>
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px"></h1>
-    <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'CNN');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Summary</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Highlights</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Start </div>
-      </a>
-    </div>
+          <form action = "/result" method = "POST">
+            <input style="font-size:25px;" type="text" name = "name" id = "name" class="btnjaskldflk">
+            <center><input type="Submit" class = "file_submit">
+                {% if inp%}
+                <h1 class="w3-center w3-jumbo" style="margin-bottom:64px"></h1>
+                <div class="w3-row w3-center w3-border w3-border-dark-grey">
+                  <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Summary</div>
+                  </a>
+                  <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Highlights</div>
+                  </a>
+                  <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Start </div>
+                  </a>
+                </div>
 
-    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
-      <hr>
-    </div>
+                <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+                  <h1><b><center>Recap</center></b></h1>
+                  <p class="w3-text-grey">{{inp[1]}}</p>
+                  <hr>
+                </div>
 
-    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
-      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
-      <hr>
+                <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+                  <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+                  <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+                <hr>
     </div>
 
 
@@ -101,9 +105,28 @@ a {background-color: #002e63}
       <p class="w3-text-grey">Ask the waiter</p>
       <hr>
     </div><br>
+                {% endif %}
+  </center></form>
+            
+    
+    
   </div>
 </div>
+<form class = "grid" action = "/result" method = "POST" >
+        <center> 
+            {% if name%}
+    <a href="../static/bg.jpg" class="file_submit" download="bg.jpg">
+      Download tweets	
+    </a>
+    <p style ="font-family: Aleo"><b>See some of the tweets that we analyzed.</b></p>
+            <h3 style = "color:rgb(0, 0, 0);"> {{name}} </h3>
 
+
+    
+            {% endif %}
+        </center>
+        
+    </form>
 <!-- About Container -->
 <div class="w3-container w3-padding-64 w3-black w3-grayscale w3-xlarge" id="about">
   <div class="w3-content">
@@ -112,9 +135,6 @@ a {background-color: #002e63}
   </div>
 </div>
 <div>
-<div class = "divider">
-  <img src = "../static/rbg3.png">
-</div>
 
 
 <!-- Depth Container -->

@@ -1,24 +1,12 @@
 from flask import Flask,render_template,request,Response
 import requests
-import random
-import tweepy
 app = Flask(__name__)
 from transformers import Trainer, AutoModel, AutoModelForSequenceClassification, AutoTokenizer
-import torch
-from torch.utils.data import Dataset, DataLoader
-from torch.optim import Adam, AdamW
-import time
+
 import numpy as np
 import os
-import matplotlib
-import io
-import matplotlib.pyplot as plt
 import numpy as np
-import io
-import random
 from flask import Response
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
 import spacy
 import nltk
 from bs4 import BeautifulSoup
@@ -30,7 +18,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "true"
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk import tokenize
 nlp = spacy.load("en_core_web_sm")
-
+nltk.download('punkt')
 def finalKeyWords(url, num_display):
     text = getText(url)
     return_content = [GetEntities(text), SentenceWordImportance(text, num_display)]
@@ -69,12 +57,11 @@ ur = "https://devonprice.medium.com/thoughts-are-not-feelings-is-shitty-psycholo
 def home():
 	return render_template("index.html")
 
-@app.route("/result",methods = ['POST','GET'])
+@app.route("/result",methods = ['POST'])
 def result():
-	output = request.form.to_dict()
-	name = output["name"]	
-	time.sleep(1)
-	return render_template("index.html",name = func1(name))
+	content = request.form.to_dict()
+	name1 = content["name"]
+	return render_template("index.html",inp = SentenceWordImportance(getText(name1),3))
 
 if __name__ == '__main__':
 	app.run(debug = True,port = 5001)
