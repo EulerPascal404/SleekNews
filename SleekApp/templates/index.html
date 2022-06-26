@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
 <link rel="stylesheet" type="text/css" href="../static/index.css">
+<link rel="icon" type="image/x-icon" href="\Users\csutanto\Desktop\NotesWork\Sleek.png">
 <style>
 body, html {height: 100%}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Trajan", sans-serif}
@@ -21,7 +22,7 @@ a {background-color: #002e63}
 </style>
 </head>
 <body>
-
+ 
   <!-- Navbar (sit on top) -->
   <div class="w3-top w3-hide-small">
     <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
@@ -89,13 +90,13 @@ a {background-color: #002e63}
                     <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Highlights</div>
                   </a>
                   <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
-                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Start </div>
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Similar</div>
                   </a>
                 </div>
 
                 <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
                   <h1><b><center>Recap</center></b></h1>
-                  <p class="w3-text-grey">{{inp[1]}}</p>
+                  <p class="w3-text-grey">{{inp[0][1]}}</p>
                   <hr>
                 </div>
 
@@ -107,8 +108,8 @@ a {background-color: #002e63}
 
 
     <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
-      <p class="w3-text-grey">Ask the waiter</p>
+      <h1><b>Similar articles</b></h1>
+      <p class="w3-text-grey">{{inp[2]}}</p>
       <hr>
     </div><br>
                 {% endif %}
