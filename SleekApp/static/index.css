@@ -16,10 +16,11 @@ html {
 } 	
 .w3-black {
 	font-family: Aleo;
-	background-color: #002e63;
+	background-color: #8c0e0f;
 }
 .w3-padding-64 {
 	font-family: Aleo;
+	background-color: #8c0e0f; 
 }
 .w3-hover-red {
 	color:#fff!important;
@@ -29,12 +30,16 @@ html {
 .bgc {
 	background-color: #002e63;
 }
+.divider {
+	background: transparent;
+}
+
 .w3-container {
 	background-color: #8c0e0f;
 }
 .w3-xxlarge {
 	font-family: Aleo;
-	background-color: #002e63;
+	background-color: #8c0e0f ;
 }
 .w3-xlarge {
 	font-family: Aleo;
