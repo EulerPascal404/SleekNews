@@ -13,6 +13,10 @@ from bs4 import BeautifulSoup
 import torch
 from collections import Counter
 import pandas as pd
+from urllib.request import urlopen, Request
+
+url = "https://sjquillen.medium.com/is-learning-a-language-a-waste-of-time-5d7d8cde57e8"
+hdr = {'User-Agent': 'Mozilla/5.0'}
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 tokenizer = AutoTokenizer.from_pretrained("distilroberta-base")
@@ -28,17 +32,24 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk import tokenize
 nlp = spacy.load("en_core_web_sm")
 def finalKeyWords(url, num_display):
-    text = getText(url)
+    text = getText(url, True)
     return_content = [GetEntities(text), SentenceWordImportance(text, num_display)]
     for t in return_content[1]:
         print(t + "\n")
     return return_content
-def getText(url):
-	page = requests.get(url)
-	soup = BeautifulSoup(page.content, "html.parser")
-	global text 
-	text = soup.get_text()
-	return text
+# give parameter of True if isMedium Article
+def getText(link, isMedium):
+    bodyText = ""
+    req = Request(link,headers=hdr)
+    page = urlopen(req)
+    soup = BeautifulSoup(page, features="html5lib")
+    if isMedium:
+        textBoxes = list(soup.find("article").find_all("p"))
+    else:
+        textBoxes = list(soup.find_all("p"))
+    for t in textBoxes:
+        bodyText = bodyText + t.get_text() + '|||'
+    return bodyText
 
 def GetEntities(text):
     doc = nlp(text)
