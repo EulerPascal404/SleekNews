@@ -69,47 +69,49 @@ html {
     text-align: center;
     color: rgb(30,30,30);
   }
-  .bottom-left {
-    position: absolute;
-    top: 700px;
-    left: 16px;
-  }
-
+  
   .top-left {
     position: absolute;
-    top: 100px;
+    top: 150px;
     left: 16px;
   }
 
 
   .top-right {
     position: absolute;
-    top: 0px;
+    top: 50px;
     right: 16px;
   }
 
 
   .right-side {
     position: absolute;
-    top: 600px;
+    top: 650px;
     right: 16px;
   }
 
  
   .middle_right{
     position: absolute;
-    top: 500px;
+    top: 550px;
     left: 16px;
 
   }
 
   .middle_left{
     position: absolute;
-    top:200px;
+    top:250px;
     right:16px
   }
+
+  .bottom_left{
+	position: absolute;
+    top:750px;
+    right:16px
+  }
+
+
 .file_submit:hover{
   background-color: white;
   color: #002e63
 }
- 
