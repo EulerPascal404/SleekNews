@@ -21,8 +21,8 @@ hdr = {'User-Agent': 'Mozilla/5.0'}
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 tokenizer = AutoTokenizer.from_pretrained("distilroberta-base")
 model = AutoModel.from_pretrained("SleekApp/checkpoint-7800")
-data = pd.read_csv("SleekApp/dataset_first_100000.csv")
-embeddings = np.load("SleekApp/news_embeddings (1).npy")
+data = pd.read_csv("SleekApp/dataset_first_100000.csv")[:3000]
+embeddings = np.load("SleekApp/news_embeddings_fixed.npy")
 def PrepareExample(text):
     inputs = tokenizer(text, truncation=True, max_length=512, padding="max_length")
     inputs = {k : torch.tensor(v).unsqueeze(0) for (k, v) in inputs.items()}
@@ -32,7 +32,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk import tokenize
 nlp = spacy.load("en_core_web_sm")
 def finalKeyWords(url, num_display):
-    text = getText(url, True)
+    text = getText(url, False)
     return_content = [GetEntities(text), SentenceWordImportance(text, num_display)]
     for t in return_content[1]:
         print(t + "\n")
@@ -72,7 +72,7 @@ ur = "https://devonprice.medium.com/thoughts-are-not-feelings-is-shitty-psycholo
 # print(finalKeyWords(ur, 3)[1])
 # print(GetEntities(getText(ur)))
 def GetMostSimilar(url):
-    text = getText(url)
+    text = getText(url,False)
     example = PrepareExample(text)
     example = {k : v for (k, v) in example.items()}
     with torch.no_grad():
@@ -90,7 +90,7 @@ def home():
 def result():
 	content = request.form.to_dict()
 	name1 = content["name"]
-	return render_template("index.html",inp = [SentenceWordImportance(getText(name1),3),0,GetMostSimilar(name1)])
+	return render_template("index.html",inp = [SentenceWordImportance(getText(name1,False),3),0,GetMostSimilar(name1)])
 
 if __name__ == '__main__':
 	app.run(debug = True,port = 5001)

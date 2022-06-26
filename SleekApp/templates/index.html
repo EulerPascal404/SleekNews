@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
 <link rel="stylesheet" type="text/css" href="../static/index.css">
-<link rel="icon" type="image/x-icon" href="\Users\csutanto\Desktop\NotesWork\Sleek.png">
+<link rel="icon" type="image/x-icon" href="../static/unknown.png">
 <style>
 body, html {height: 100%}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Trajan", sans-serif}
@@ -15,59 +15,68 @@ a {background-color: #002e63}
 .menu {display: none}
 .bgimg {
   background-repeat: no-repeat;
-  background-image: url("/static/bg.jpg");
+  background-image: url("../static/bg.jpg");
   min-height: 90%;
-  z-index:-5;
+  position:relative;
+  z-index:1;
+}
+.scrolling {
+  position:relative;
+  z-index:3;
+}
+.bgc {
+  position:relative;
+  z-index: 2;
+  
 }
 </style>
 </head>
 <body>
  
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top w3-hide-small">
-    <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-      <a href="#" class="w3-bar-item w3-button">HOME</a>
-      <a href="#menu" class="w3-bar-item w3-button">MENU</a>
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href=<!DOCTYPE html>
-        <html>
-        <head>
-        <title>Sleek News</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-        <link rel="stylesheet" type="text/css" href="../static/index.css">
-        <style>
-        body, html {height: 100%}
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Trajan", sans-serif}
-        .menu {display: none}
-        .bgimg {
-          background-repeat: no-repeat;
-          background-size: cover;
-          /*background-image: url("/static/bg.jpg");*/
-          min-height: 90%;
-        }
-        </style>
-    </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <html>
+      <head>
+      <title>Sleek News</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+      <link rel="stylesheet" type="text/css" href="../static/index.css">
+      <style>
+      body, html {height: 100%}
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Trajan", sans-serif}
+      .menu {display: none}
+      .bgimg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*background-image: url("/static/bg.jpg");*/
+        min-height: 90%;
+      }
+      </style>
   </div>
-  <div class="scrolling">
-    <div class="top-left"><marquee behavior = scroll direction = "right" scrollamount = "10">You Have The Power To Save One Marvel Movie Per Category, While Thanos Snaps The Other Away  | Mom-and-pop eateries at popular food court prepare to leave as Home Depot moves in</marquee></div>
-    <div class="right-side"><marquee scrollamount = "6">Aditya comes out with pronouns Poopt/Poopta | Farmer Caught Googling ‘What Is Corn’</marquee></div>
-    <div class="middle_right"><marquee scrollamount="8">'I'm grateful I got anything': Burger King worker, 60, who got movie ticket, candy and pens for 27 years of service without missing a shift says he'll pay for his grandkids to go to college as GoFundMe soars past $120,000 | 'We're back together!' Sir Paul McCartney, 80, duets with JOHN LENNON thanks to hi-tech wizardry from Peter Jackson as he becomes the oldest solo star to headline Glastonbury and is joined on stage by rocker Dave Grohl and legend Bruce Springsteen </marquee></div>
-    <div class="middle_left"><marquee scrollamount="5" direction = "right">'I'm so thankful that I'm on the same team as Ryan': Gupta and Joey cry tears upon finding out their hackathon teammates | 'We're not like other kids': Sleek founders claim that they're the best to ever do it at ping pong</marquee></div>
-  <div class="top-right"><marquee behavior = scroll direction = "left" scrollamount = "4">JB Pritzker, Standing In A Field Wearing A Top Hat And Overalls: We Convinced Him This Was How Rural Voters Dressed | Bear makes repeated visits to Florida golf course, tennis courts | BTS’ J-Hope to Drop Solo Album, ‘Jack in the Box,’ Next Month</marquee> </div>
-  </div> 
-  <!-- Header with image -->
-  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-bottomleft w3-padding">
-      <span class="w3-tag w3-xlarge">Created with love by Aditya, Joey, Josh, and Ryan</span>
-    </div>
-    <div class="w3-display-middle w3-center">
-      <img src="/static/logo.png" style="width:100%;" id="myMap">
-      <p><a href="#menu" class="bgc w3-button w3-xxlarge w3-black">Learn More</a></p>
-    </div>
-  </header>
+</div>
+<div class="scrolling">
+  <div class="top-left"><marquee behavior = scroll direction = "right" scrollamount = "10">You Have The Power To Save One Marvel Movie Per Category, While Thanos Snaps The Other Away  | Mom-and-pop eateries at popular food court prepare to leave as Home Depot moves in</marquee></div>
+  <div class="right-side"><marquee scrollamount = "6">Aditya comes out with pronouns Poopt/Poopta | Farmer Caught Googling ‘What Is Corn’</marquee></div>
+  <div class="middle_right"><marquee scrollamount="8">'I'm grateful I got anything': Burger King worker, 60, who got movie ticket, candy and pens for 27 years of service without missing a shift says he'll pay for his grandkids to go to college as GoFundMe soars past $120,000 | 'We're back together!' Sir Paul McCartney, 80, duets with JOHN LENNON thanks to hi-tech wizardry from Peter Jackson as he becomes the oldest solo star to headline Glastonbury and is joined on stage by rocker Dave Grohl and legend Bruce Springsteen </marquee></div>
+  <div class="middle_left"><marquee scrollamount="5" direction = "right">'I'm so thankful that I'm on the same team as Ryan': Gupta and Joey cry tears upon finding out their hackathon teammates | 'We're not like other kids': Sleek founders claim that they're the best to ever do it at ping pong</marquee></div>
+<div class="top-right"><marquee behavior = scroll direction = "left" scrollamount = "4">JB Pritzker, Standing In A Field Wearing A Top Hat And Overalls: We Convinced Him This Was How Rural Voters Dressed | Bear makes repeated visits to Florida golf course, tennis courts | BTS’ J-Hope to Drop Solo Album, ‘Jack in the Box,’ Next Month</marquee> </div>
+</div> 
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Created with love by Aditya, Joey, Josh, and Ryan</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <img src="../static/logo.png" style="width:100%;" id="myMap">
+    <p><a href="#menu" class="bgc w3-button w3-xxlarge w3-black">Learn More</a></p>
+  </div>
+</header>
 
 <!-- Menu Container -->
 <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
@@ -96,7 +105,7 @@ a {background-color: #002e63}
 
                 <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
                   <h1><b><center>Recap</center></b></h1>
-                  <p class="w3-text-grey">{{inp[0][1]}}</p>
+                  <p class="w3-text-grey">{{inp[0][0].split("|||")[3]}}</p>
                   <hr>
                 </div>
 
