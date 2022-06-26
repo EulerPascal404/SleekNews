@@ -18,7 +18,6 @@ os.environ["TOKENIZERS_PARALLELISM"] = "true"
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk import tokenize
 nlp = spacy.load("en_core_web_sm")
-nltk.download('punkt')
 def finalKeyWords(url, num_display):
     text = getText(url)
     return_content = [GetEntities(text), SentenceWordImportance(text, num_display)]

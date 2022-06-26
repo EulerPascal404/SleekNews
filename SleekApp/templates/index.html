@@ -14,9 +14,9 @@ a {background-color: #002e63}
 .menu {display: none}
 .bgimg {
   background-repeat: no-repeat;
-  background-size: cover;
   background-image: url("/static/bg.jpg");
   min-height: 90%;
+  z-index:-5;
 }
 </style>
 </head>
@@ -44,13 +44,19 @@ a {background-color: #002e63}
         .bgimg {
           background-repeat: no-repeat;
           background-size: cover;
-          background-image: url("/static/bg.jpg");
+          /*background-image: url("/static/bg.jpg");*/
           min-height: 90%;
         }
         </style>
     </div>
   </div>
-    
+  <div class="scrolling">
+    <div class="top-left"><marquee behavior = scroll direction = "right" scrollamount = "10">You Have The Power To Save One Marvel Movie Per Category, While Thanos Snaps The Other Away  | Mom-and-pop eateries at popular food court prepare to leave as Home Depot moves in</marquee></div>
+    <div class="right-side"><marquee scrollamount = "6">Aditya comes out with pronouns Poopt/Poopta | Farmer Caught Googling ‘What Is Corn’</marquee></div>
+    <div class="middle_right"><marquee scrollamount="8">'I'm grateful I got anything': Burger King worker, 60, who got movie ticket, candy and pens for 27 years of service without missing a shift says he'll pay for his grandkids to go to college as GoFundMe soars past $120,000 | 'We're back together!' Sir Paul McCartney, 80, duets with JOHN LENNON thanks to hi-tech wizardry from Peter Jackson as he becomes the oldest solo star to headline Glastonbury and is joined on stage by rocker Dave Grohl and legend Bruce Springsteen </marquee></div>
+    <div class="middle_left"><marquee scrollamount="5" direction = "right">'I'm so thankful that I'm on the same team as Ryan': Gupta and Joey cry tears upon finding out their hackathon teammates | 'We're not like other kids': Sleek founders claim that they're the best to ever do it at ping pong</marquee></div>
+  <div class="top-right"><marquee behavior = scroll direction = "left" scrollamount = "4">JB Pritzker, Standing In A Field Wearing A Top Hat And Overalls: We Convinced Him This Was How Rural Voters Dressed | Bear makes repeated visits to Florida golf course, tennis courts | BTS’ J-Hope to Drop Solo Album, ‘Jack in the Box,’ Next Month</marquee> </div>
+  </div> 
   <!-- Header with image -->
   <header class="bgimg w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-bottomleft w3-padding">
@@ -112,21 +118,7 @@ a {background-color: #002e63}
     
   </div>
 </div>
-<form class = "grid" action = "/result" method = "POST" >
-        <center> 
-            {% if name%}
-    <a href="../static/bg.jpg" class="file_submit" download="bg.jpg">
-      Download tweets	
-    </a>
-    <p style ="font-family: Aleo"><b>See some of the tweets that we analyzed.</b></p>
-            <h3 style = "color:rgb(0, 0, 0);"> {{name}} </h3>
 
-
-    
-            {% endif %}
-        </center>
-        
-    </form>
 <!-- About Container -->
 <div class="w3-container w3-padding-64 w3-black w3-grayscale w3-xlarge" id="about">
   <div class="w3-content">
