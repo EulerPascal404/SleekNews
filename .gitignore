@@ -7,3 +7,8 @@ SleekApp/checkpoint-7800/trainer_state.json
 SleekApp/checkpoint-7800/training_args.bin
 SleekApp/dataset_first_100000.csv
 SleekApp/news_embeddings (1).npy
+SleekApp/deberta-v3-base/pytorch_model.bin
+SleekApp/deberta-v3-base/config.json
+SleekApp/deberta-v3-base/spm.model
+SleekApp/deberta-v3-base/tokenizer_config.json
+SleekApp/deberta_base_epoch_1_fold_1.pth
